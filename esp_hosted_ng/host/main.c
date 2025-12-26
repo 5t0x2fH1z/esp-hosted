@@ -1147,5 +1147,6 @@ MODULE_AUTHOR("Yogesh Mantri <yogesh.mantri@espressif.com>");
 MODULE_AUTHOR("Kapil Gupta <kapil.gupta@espressif.com>");
 MODULE_DESCRIPTION("Wifi driver for ESP-Hosted solution");
 MODULE_VERSION(RELEASE_VERSION);
+MODULE_IMPORT_NS(VFS_internal_I_am_really_a_filesystem_and_am_NOT_a_driver);
 module_init(esp_init);
 module_exit(esp_exit);
