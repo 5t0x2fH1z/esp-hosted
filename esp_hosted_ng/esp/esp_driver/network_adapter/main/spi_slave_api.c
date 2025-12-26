@@ -50,7 +50,7 @@ static const char TAG[] = "FW_SPI";
 #define MAKE_SPI_DMA_ALIGNED(VAL)  (VAL += SPI_DMA_ALIGNMENT_BYTES - \
                 ((VAL)& SPI_DMA_ALIGNMENT_MASK))
 
-uint8_t g_spi_mode = SPI_MODE_2;
+uint8_t g_spi_mode = SPI_MODE_3;
 
 /* Chipset specific configurations */
 #ifdef CONFIG_IDF_TARGET_ESP32
@@ -100,10 +100,10 @@ uint8_t g_spi_mode = SPI_MODE_2;
 #elif defined CONFIG_IDF_TARGET_ESP32S3
 
 #define ESP_SPI_CONTROLLER      1
-#define GPIO_MOSI           11
-#define GPIO_MISO           13
-#define GPIO_SCLK           12
-#define GPIO_CS             10
+#define GPIO_MOSI           9
+#define GPIO_MISO           8
+#define GPIO_SCLK           7
+#define GPIO_CS             6
 #define DMA_CHAN            SPI_DMA_CH_AUTO
 
 #define SPI_CLK_MHZ         30
